@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="xm-box">
+  <div class="title">
+    <h2>{$goods_cat.name|escape:html}</h2>
+    <a class="more" href="{$goods_cat.url}">更多</a></div>
+  <div id="show_hot_area" class="clearfix xm-boxs"> 
+    
+    <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem goodsItems"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  class="goodsimg "/></a>
+      <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a></p>
+      <p class="value bigsize">
+      <font class="f1"> 
+      <!-- {if $goods.promote_price neq ""} --> 
+      {$goods.promote_price} 
+      <!-- {else}--> 
+      {$goods.shop_price} 
+      <!--{/if}--> 
+      </font> 
+     <font class="market"> 原价：<a>{$goods.market_price}</a></font>
+     
+      </p>
+     
+      </div>
+    <!--{/foreach}--> 
+  </div>
+</div>
+<div class="blank"></div>
